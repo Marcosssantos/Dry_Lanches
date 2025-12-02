@@ -241,6 +241,77 @@
       .stats-row { grid-template-columns: 1fr; }
       .header-actions { display: none; }
     }
+    /* ----- LAYOUT PADRÃO (DESKTOP) ----- */
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.sidebar {
+    width: 260px;
+}
+
+.content-area {
+    flex: 1;
+}
+
+/* ----- MOBILE (ATÉ 768PX) ----- */
+@media (max-width: 768px) {
+
+    /* Tudo em coluna */
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /* Sidebar em FILA, não lateral */
+    .sidebar {
+        width: 100%;
+        order: 2; /* Desce abaixo do conteúdo se quiser */
+    }
+
+    /* Conteúdo vem primeiro */
+    .content-area {
+        width: 100%;
+        order: 1;
+    }
+
+    /* Atividades (botões / menus) empilhados */
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-btn {
+        width: 100%;
+        text-align: left;
+        padding: 14px;
+        font-size: 18px;
+    }
+
+    /* Produtos e vendas também ficam em coluna */
+    .sale-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    #products-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .total-display {
+        font-size: 18px;
+    }
+}
+@media (max-width: 768px) {
+    .container,
+    .sidebar,
+    .content-area,
+    .nav-menu,
+    .nav-btn {
+        transition: all .25s ease;
+    }
+}
   </style>
 </head>
 <body>
