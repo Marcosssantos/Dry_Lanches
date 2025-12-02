@@ -1,0 +1,19 @@
+Perfeito. Adicionei a função de Restaurar Backup.
+
+Agora, na aba Ajustes, você verá o botão "Restaurar Backup".
+
+Ao clicar, ele abre os arquivos do seu celular/computador.
+
+Você seleciona o arquivo .json que baixou anteriormente.
+
+O sistema verifica se o arquivo é válido e substitui os dados atuais pelos do backup (pedindo confirmação).
+
+Por nada! Fico contente que tenha gostado do novo visual e da segurança extra. O sistema agora está muito mais profissional e seguro para o dia a dia.
+
+Como ele ficou 100% responsivo, aqui vai uma dica de ouro para usar no celular:
+
+Se você hospedar esse arquivo (ou apenas abrir o arquivo HTML no Chrome do celular), você pode clicar nos 3 pontinhos do navegador e escolher "Adicionar à tela inicial". Ele vai criar um ícone igual a um aplicativo, removendo a barra de endereços para ficar com cara de sistema nativo.
+
+Quer dar o próximo passo? Notei que o código atual faz o Backup (Exportar), mas ainda não tem o botão de Importar/Restaurar os dados caso você mude de celular.
+
+Gostaria que eu adicionasse a função de "Importar Backup" agora?
