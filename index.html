@@ -92,10 +92,7 @@ select, input, button { max-width:100%; box-sizing:border-box; }
 <main class="container">
   <!-- SIDEBAR -->
   <aside class="card" style="display:flex;flex-direction:column;gap:12px">
-    <div class="search-box">
-      <span class="material-icons-round">search</span>
-      <input id="search-products" placeholder="Buscar (nome ou código)..." />
-    </div>
+
 
     <nav style="display:flex;flex-direction:column;gap:6px">
       <button class="nav-btn active" data-tab="sales"> <span class="material-icons-round">point_of_sale</span> Vender</button>
@@ -112,7 +109,11 @@ select, input, button { max-width:100%; box-sizing:border-box; }
   <section class="content-area">
     <!-- SALES -->
     <div id="tab-sales" class="panel">
-      <h2 style="margin:0 0 10px 0">Nova Venda          <button class="btn primary" id="btn-add-to-cart"><span class="material-icons-round">add_shopping_cart</span></button>       <input id="qty" type="number" min="1" value="1" style="width:90px;padding:10px;border-radius:10px;border:1px solid rgba(15,23,42,0.06)"> </h2>
+    <div class="search-box">
+      <span class="material-icons-round">search</span>
+      <input id="search-products" placeholder="Buscar (nome ou código)..." />
+    </div>
+      <h2 style="margin:0 0 10px 0">Nova Venda    <button class="btn primary" id="btn-add-to-cart"><span class="material-icons-round">add_shopping_cart</span></button>       <input id="qty" type="number" min="1" value="1" style="width:90px;padding:10px;border-radius:10px;border:1px solid rgba(15,23,42,0.06)"> </h2>
 
       <!-- short alerts -->
       <div id="sales-alert-area"></div>
