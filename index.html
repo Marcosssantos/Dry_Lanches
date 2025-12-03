@@ -112,15 +112,14 @@ select, input, button { max-width:100%; box-sizing:border-box; }
   <section class="content-area">
     <!-- SALES -->
     <div id="tab-sales" class="panel">
-      <h2 style="margin:0 0 10px 0">Nova Venda</h2>
+      <h2 style="margin:0 0 10px 0">Nova Venda          <button class="btn primary" id="btn-add-to-cart"><span class="material-icons-round">add_shopping_cart</span></button>       <input id="qty" type="number" min="1" value="1" style="width:90px;padding:10px;border-radius:10px;border:1px solid rgba(15,23,42,0.06)"> </h2>
 
       <!-- short alerts -->
       <div id="sales-alert-area"></div>
 
       <div style="display:flex;gap:8px;margin-bottom:8px;align-items:center">
         <select id="sel-product" style="flex:1;padding:10px;border-radius:10px;border:1px solid rgba(15,23,42,0.06)"></select>
-        <input id="qty" type="number" min="1" value="1" style="width:90px;padding:10px;border-radius:10px;border:1px solid rgba(15,23,42,0.06)">
-        <button class="btn primary" id="btn-add-to-cart"><span class="material-icons-round">add_shopping_cart</span></button>
+
       </div>
 
       <div style="display:flex;gap:12px;flex-wrap:wrap">
@@ -689,6 +688,15 @@ select, input, button { max-width:100%; box-sizing:border-box; }
   // boot
   function boot(){
     loadData(); seedIfEmpty(); attachEvents(); refreshUI();
+       // 🔎 ATIVAR BUSCA EM TEMPO REAL
+const searchInput = qs('#search-products');
+if (searchInput) {
+  searchInput.addEventListener('input', () => {
+    renderProductSelect();       // atualiza o select da área de venda
+    renderProductsGridFull();    // atualiza a área de catálogo
+  });
+}
+
     // default tab show sales
     ['sales','products','history','settings'].forEach(t => qs('#tab-'+t).style.display = (t==='sales'?'block':'none'));
     // expose API
